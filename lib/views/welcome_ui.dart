@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:iot_sau_first_projec/views/login_ui.dart';
+import 'package:iot_sau_first_projec/views/signup_ui.dart';
 
 class WelcomeUi extends StatefulWidget {
   const WelcomeUi({super.key});
@@ -21,7 +23,7 @@ class _WelcomeUiState extends State<WelcomeUi> {
   ///
   /// The Text widget has a font size of 3.5% of the screen height, and a bold
   /// font weight.
-/******  ae0a8bdf-1e48-46d5-8b6f-164f3c2b3526  *******/
+/// ****  ae0a8bdf-1e48-46d5-8b6f-164f3c2b3526  ******
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 252, 172, 0),
@@ -31,7 +33,8 @@ class _WelcomeUiState extends State<WelcomeUi> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.1,
             ),
-            Image.asset('assets/icons/logo.png',
+            //Image.file('C:\Users\IT403PC\Documents\deef\flutter_project\iot_sau_first_projec\assets\icons\logo.png'),
+            Image.asset('assets\icons\logo.png',
                 //width: 200.0,
                 width: MediaQuery.of(context).size.width * 0.7),
             SizedBox(
@@ -57,7 +60,15 @@ class _WelcomeUiState extends State<WelcomeUi> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //เปิดหน้าจอแบบย้อนกลับ
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'LOGIN',
                     style: TextStyle(
@@ -74,12 +85,20 @@ class _WelcomeUiState extends State<WelcomeUi> {
                   width: MediaQuery.of(context).size.width * 0.035,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //เปิดหน้าจอแบบย้อนกลับ
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'SIGNUP',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: const Color.fromARGB(255, 248, 248, 248),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                   style: OutlinedButton.styleFrom(

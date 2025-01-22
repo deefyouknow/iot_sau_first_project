@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_sau_first_projec/views/login_ui.dart';
 import 'package:iot_sau_first_projec/views/welcome_ui.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class _iot_sau_first_projecState extends State<iot_sau_first_projec> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeUi(), //เรียกใช้หน้าจอแรกของแอป
+      home: LoginUI(), //เรียกใช้หน้าจอแรกของแอป
     );
 
   }
